@@ -32,16 +32,6 @@ _Replace with your actual hosted link (e.g., GitHub Pages, Vercel, Netlify, etc.
 
 ---
 
-## 📸 Screenshots
-
-| Desktop View | Mobile View |
-|--------------|-------------|
-| ![Desktop](screenshots/desktop.png) | ![Mobile](screenshots/mobile.png) |
-
-> _Add actual screenshot images in a `screenshots/` folder_
-
----
-
 ## ✉️ Contact
 
 Feel free to connect with me:
