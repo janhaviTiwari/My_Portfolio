@@ -3,38 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Janhavi Tiwari - Portfolio</title>
+  <meta property="og:title" content="Janhavi Tiwari - Portfolio" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta property="og:description" content="Explore my projects, skills, and achievements as a developer and designer." />
+  <meta property="og:image" content="profile-image.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  
 </head>
 <body>
- <header class="hero">
-  <div class="hero-flex">
-    <div class="hero-content">
-      <h1 class="glow-text">Janhavi Tiwari</h1>
-      <p class="typing-text"></p>
-    </div>
+  <div class="loading-overlay" id="loader">
+    <div class="loader"></div>
   </div>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-    </ul>
-  </nav>
-</header>
+  <div class="animated-bg"></div>
+  <div class="floating-shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="about-grid">
-    <!-- Profile Photo -->
-    <div class="about-photo">
-      <img src="profileimg.jpeg" alt="Janhavi Tiwari" />
+  <header class="nav-header" id="navbar">
+    <div class="nav-content">
+      <div class="logo">JT</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- About Content -->
-    <div class="about-content">
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="fade-up">Hi, I'm <span class="name-highlight">Janhavi Tiwari</span></h1>
+        <p class="hero-subtitle fade-up">A passionate <span class="highlight">Web Developer</span> creating stunning and functional websites.</p>
+        <div class="typing-container">
+          <div class="typing-text fade-up">I code, I design, I build.</div>
+        </div>
+        <div class="hero-buttons fade-up">
+          <a href="#contact" class="btn btn-primary">Contact Me</a>
+          <a href="#projects" class="btn btn-secondary">View Projects</a>
+          <a href="assets/janhavi_tiwari_resume (2).pdf" class="btn btn-secondary" download>Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="profile-container">
+          <div class="profile-ring"></div>
+          <div class="profile-ring"></div>
+          <img src="assets/profile_img.jpg" alt="Janhavi Tiwari" class="profile-image" />
+        </div>
+        <div class="tech-icons">
+          <div class="tech-icon">🌐</div>
+          <div class="tech-icon">💻</div>
+          <div class="tech-icon">📱</div>
+          <div class="tech-icon">🎨</div>
+        </div>
+      </div>
+    </section>
+
+   
+  <!-- About Section -->
+<section id="about">
+  <div class="section-header">
+    <h2 class="section-title fade-up">About Me</h2>
+    <p class="section-subtitle fade-up">Get to know me and my journey as a web developer.</p>
+  </div>
+  <div class="about-content">
+    <div class="about-text fade-up">
       <p>
         👋 Hi there! I'm <strong>Janhavi Tiwari</strong>, a driven and versatile
         <strong>Full Stack Web Developer</strong> with a strong command of the
@@ -58,151 +101,411 @@
 
       <p>
         I'm always looking for opportunities to learn, collaborate, and grow while building meaningful digital products. 🚀
-      </p>
-
-      <a href="janhavi_tiwari_cv.pdf" download class="cv-button">📄 Download CV</a>
-      <a href="Janhavi_tiwari_resume.pdf" download class="resume-button">📄 Download Resume</a>
+      </p> </div>
+    <div class="about-stats fade-up">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Personal Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">6+</div>
+          <div class="stat-label">Tech Skills Learned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Team Collaborations</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Curiosity & Growth</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 
-
-
- <section id="skills">
-  <h2>Skills</h2>
-  <ul class="skills-list">
-    <li>Full Stack Web Development</li>
-    <li>MERN Stack (MongoDB, Express, React, Node.js)</li>
-    <li>Frontend: HTML, CSS, JavaScript, Bootstrap</li>
-    <li>Backend: Node.js, Express.js, REST APIs</li>
-    <li>Database: MongoDB, MySQL, SQL</li>
-    <li>Programming: C++, Python</li>
-    <li>DSA (C++ Problem Solving)</li>
-    <li>Version Control: Git, GitHub</li>
-    <li>Deployment: Netlify, Vercel, Render</li>
-    <li>Tools: Postman, VS Code, Chrome DevTools</li>
-  </ul>
-</section>
-
-
-  <section id="projects">
-  <h2>Projects</h2>
-
-  <div class="filter-buttons">
-    <button data-filter="all" class="active">All</button>
-    <button data-filter="mern">MERN</button>
-    <button data-filter="frontend">Frontend</button>
-    <button data-filter="python">Python</button>
-    <button data-filter="cpp">C++</button>
+   <!-- Skills Section -->
+<section id="skills">
+  <div class="section-header">
+    <h2 class="section-title fade-up">My Skills</h2>
+    <p class="section-subtitle fade-up">Technologies, languages, and tools I've been working with.</p>
   </div>
 
-  <div class="projects-gallery">
-    <div class="project-card mern">
-      <h3>HelpKart</h3>
-      <p>Local donation & help MERN app</p>
+  <div class="skills-container">
+    <div class="skills-categories">
+   
+      <div class="category-btn" data-category="frontend">Frontend</div>
+      <div class="category-btn" data-category="backend">Backend</div>
+      <div class="category-btn" data-category="languages">Languages</div>
+      <div class="category-btn" data-category="tools">Tools</div>
     </div>
 
-    <div class="project-card mern">
-      <h3>WhatsApp Mini App</h3>
-      <p>Real-time chat clone with Mongo, Express</p>
-    </div>
+    <div class="skills-display">
+      <!-- Frontend -->
+      <div class="skill-category frontend">
+        <div class="skill-item fade-up"><div class="skill-name">HTML</div><div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div><div class="skill-percentage">90%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">CSS</div><div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div><div class="skill-percentage">85%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">JavaScript</div><div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div><div class="skill-percentage">80%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">React</div><div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div><div class="skill-percentage">75%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">Tailwind CSS</div><div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div><div class="skill-percentage">70%</div></div>
+      </div>
 
-    <div class="project-card cpp">
-      <h3>DSA Tracker CLI</h3>
-      <p>Track C++/DSA practice in terminal</p>
-    </div>
+      <!-- Backend -->
+      <div class="skill-category backend">
+        <div class="skill-item fade-up"><div class="skill-name">Node.js</div><div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div><div class="skill-percentage">70%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">Express.js</div><div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div><div class="skill-percentage">70%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">MongoDB</div><div class="skill-bar"><div class="skill-progress" data-width="65%"></div></div><div class="skill-percentage">65%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">REST API</div><div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div><div class="skill-percentage">70%</div></div>
+      </div>
 
-    <div class="project-card python">
-      <h3>Voice Assistant</h3>
-      <p>Speech-to-command Python AI</p>
-    </div>
+      <!-- Languages -->
+      <div class="skill-category languages">
+        <div class="skill-item fade-up"><div class="skill-name">C</div><div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div><div class="skill-percentage">75%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">C++</div><div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div><div class="skill-percentage">70%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">Python</div><div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div><div class="skill-percentage">70%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">Java</div><div class="skill-bar"><div class="skill-progress" data-width="60%"></div></div><div class="skill-percentage">60%</div></div>
+        <div class="skill-item fade-up"><div class="skill-name">SQL</div><div class="skill-bar"><div class="skill-progress" data-width="65%"></div></div><div class="skill-percentage">65%</div></div>
+      </div>
 
-    <div class="project-card frontend">
-      <h3>Weather App</h3>
-      <p>Live API-based JS weather checker</p>
-    </div>
+     <!-- Tools -->
+<div class="skill-category tools">
+  <div class="skill-item fade-up">
+    <div class="skill-name">GitHub</div>
+    <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+    <div class="skill-percentage">80%</div>
+  </div>
+  <div class="skill-item fade-up">
+    <div class="skill-name">Canva</div>
+    <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+    <div class="skill-percentage">85%</div>
+  </div>
+  <div class="skill-item fade-up">
+    <div class="skill-name">ChatGPT</div>
+    <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+    <div class="skill-percentage">75%</div>
+  </div>
+  <div class="skill-item fade-up">
+    <div class="skill-name">DSA (Basic)</div>
+    <div class="skill-bar"><div class="skill-progress" data-width="60%"></div></div>
+    <div class="skill-percentage">60%</div>
+  </div>
 
-    <div class="project-card mern">
-      <h3>Airbnb Clone</h3>
-      <p>Listings with Express, MongoDB</p>
-    </div>
+  <div class="skill-item fade-up">
+    <div class="skill-name">Git</div>
+    <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+    <div class="skill-percentage">75%</div>
+  </div>
+  <div class="skill-item fade-up">
+    <div class="skill-name">Netlify / Vercel / Render</div>
+    <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+    <div class="skill-percentage">70%</div>
+  </div>
+  
+  <div class="skill-item fade-up">
+    <div class="skill-name">VS Code</div>
+    <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+    <div class="skill-percentage">90%</div>
+  </div>
 
-    <div class="project-card frontend">
-      <h3>Portfolio Site</h3>
-      <p>This modern portfolio with animations</p>
+</div>
     </div>
   </div>
 </section>
 
-<section id="achievements">
-  <h2>Achievements & Certifications</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <img src="ai.png" alt="Generative AI" class="timeline-img">
-      <div>
+   <!-- Projects Section -->
+<section id="projects">
+  <div class="section-header">
+    <h2 class="section-title fade-up">My Projects</h2>
+    <p class="section-subtitle fade-up">A selection of my recent work.</p>
+  </div>
+
+  <div class="projects-grid">
+
+   
+    <!-- Simon Says Game -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <h3 class="project-title">Simon Says Game</h3>
+        <p class="project-description">A classic color memory game built with JavaScript, HTML, and CSS.</p>
+        <div class="project-tech">
+          <div class="tech-tag">HTML</div>
+          <div class="tech-tag">CSS</div>
+          <div class="tech-tag">JavaScript</div>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://janhavitiwari.github.io/simon_says_game" class="project-link">View Project</a>
+        <a href="https://github.com/janhaviTiwari/simon_says_game" class="project-link">GitHub</a>
+      </div>
+    </div>
+
+    <!-- To-Do App -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <h3 class="project-title">To-Do App</h3>
+        <p class="project-description">A task management app to add, edit, and delete daily tasks efficiently.</p>
+        <div class="project-tech">
+          <div class="tech-tag">HTML</div>
+          <div class="tech-tag">CSS</div>
+          <div class="tech-tag">JavaScript</div>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://janhavitiwari.github.io/To_Do_App" class="project-link">View Project</a>
+        <a href="https://github.com/janhaviTiwari/To_Do_App" class="project-link">GitHub</a>
+      </div>
+    </div>
+
+    <!-- React To-Do App -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <h3 class="project-title">React To-Do App</h3>
+        <p class="project-description">A React-based dynamic to-do list for better task handling.</p>
+        <div class="project-tech">
+          <div class="tech-tag">React</div>
+          <div class="tech-tag">JavaScript</div>
+          <div class="tech-tag">CSS</div>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://getthings-done.netlify.app" class="project-link">View Project</a>
+        <a href="https://github.com/janhaviTiwari/Todo_app" class="project-link">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Mini WhatsApp -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <h3 class="project-title">Mini WhatsApp</h3>
+        <p class="project-description">A real-time chat application inspired by WhatsApp, using WebSockets.</p>
+        <div class="project-tech">
+          <div class="tech-tag">Node.js</div>
+          <div class="tech-tag">Express</div>
+          <div class="tech-tag">Socket.io</div>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="" class="project-link">View Project</a>
+        <a href="https://github.com/janhaviTiwari/Mini_whatsapp" class="project-link">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Weather App -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <h3 class="project-title">Weather App</h3>
+        <p class="project-description">A weather application providing real-time weather updates using Weather API.</p>
+        <div class="project-tech">
+          <div class="tech-tag">HTML</div>
+          <div class="tech-tag">CSS</div>
+          <div class="tech-tag">JavaScript</div>
+          <div class="tech-tag">Weather API</div>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="mycity-weather.netlify.app" class="project-link">View Project</a>
+        <a href="https://github.com/janhaviTiwari/Weather_app" class="project-link">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Portfolio Website -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <h3 class="project-title">Portfolio Website</h3>
+        <p class="project-description">Personal portfolio to showcase my projects, skills, and resume online.</p>
+        <div class="project-tech">
+          <div class="tech-tag">HTML</div>
+          <div class="tech-tag">CSS</div>
+          <div class="tech-tag">JavaScript</div>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://janhaviiportfolio.netlify.app" class="project-link">View Project</a>
+        <a href="https://github.com/janhaviTiwari/My_Portfolio" class="project-link">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications">
+  <div class="section-header">
+    <h2 class="section-title fade-up">Certifications</h2>
+    <p class="section-subtitle fade-up">Courses and certificates earned.</p>
+  </div>
+
+  <div class="cert-timeline">
+
+    <!-- Certification Item -->
+    <div class="cert-item fade-up">
+      <a class="cert-icon" href="ai.png" target="_blank">
+        <img src="assets/ai.png" alt="AI" />
+      </a>
+      <div class="cert-content">
         <h3>Generative AI for Beginners</h3>
         <p>Simplilearn's SkillUp — 2024</p>
       </div>
     </div>
-    <div class="timeline-item">
-      <img src="python.png" alt="Python Fundamentals" class="timeline-img">
-      <div>
+
+    <div class="cert-item fade-up">
+      <a class="cert-icon" href="python.png" target="_blank">
+        <img src="assets/python.png" alt="Python" />
+      </a>
+      <div class="cert-content">
         <h3>Programming Fundamentals using Python - Part 1</h3>
         <p>Infosys Springboard — 2024</p>
       </div>
     </div>
-    <div class="timeline-item">
-      <img src="nptl.png" alt="Problem Solving in C" class="timeline-img">
-      <div>
+
+    <div class="cert-item fade-up">
+      <a class="cert-icon" href="nptl.png" target="_blank">
+        <img src="assets/nptl.png" alt="C Programming" />
+      </a>
+      <div class="cert-content">
         <h3>Problem Solving through Programming in C (Elite)</h3>
-        <p>NPTEL (MoE, Govt. of India), Prof. Haimanti Banerji — 2023</p>
+        <p>NPTEL — 2023</p>
       </div>
     </div>
-    <div class="timeline-item">
-      <img src="softerware_engineering.png" alt="EA Forage Simulation" class="timeline-img">
-      <div>
+
+    <div class="cert-item fade-up">
+      <a class="cert-icon" href="softerware_engineering.png" target="_blank">
+        <img src="assets/softerware_engineering.png" alt="EA Forage" />
+      </a>
+      <div class="cert-content">
         <h3>Software Engineering Job Simulation</h3>
         <p>Electronic Arts via Forage — 2023</p>
       </div>
     </div>
 
-    <div class="timeline-item">
-      <img src="hackerrank.png" alt="HackerRank Problem Solving" class="timeline-img">
-      <div>
+    <div class="cert-item fade-up">
+      <a class="cert-icon" href="goldman_sachs.png" target="_blank">
+        <img src="assets/goldman_sachs.png" alt="Goldman Sachs" />
+      </a>
+      <div class="cert-content">
+        <h3>Software Engineering Job Simulation</h3>
+        <p>Goldman Sachs via Forage — 2025</p>
+      </div>
+    </div>
+
+    <div class="cert-item fade-up">
+      <a class="cert-icon" href="hackerrank.png" target="_blank">
+        <img src="assets/hackerrank.png" alt="HackerRank" />
+      </a>
+      <div class="cert-content">
         <h3>Problem Solving (Intermediate)</h3>
         <p>HackerRank — 2023</p>
       </div>
     </div>
-  </div>
-  <div class="timeline-item">
-  <img src="goldman_sachs.png" alt="Goldman Sachs Software Engineering Certificate" class="timeline-img">
-  <div>
-    <h3>Software Engineering Job Simulation</h3>
-    <p>Goldman Sachs via Forage — 2025</p>
-  </div>
-</div>
 
+    <div class="cert-item fade-up">
+      <a class="cert-icon" href="hackerrank.png" target="_blank">
+        <img src="assets/hackerrank.png" alt="Python Basic" />
+      </a>
+      <div class="cert-content">
+        <h3>Python (Basic)</h3>
+        <p>HackerRank — 2024</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-header">
+        <h2 class="section-title fade-up">Contact Me</h2>
+        <p class="section-subtitle fade-up">Get in touch for collaborations or just to say hi!</p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item fade-up">
+              <div class="contact-icon">
+             <i class="fas fa-envelope"></i>
+             </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-detail">janhavitiwari581@gmail.com</div>
+            </div>
+          </div>
+         
+          <div class="contact-item fade-up">
+              <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+              </div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-detail">Kanpur UP, India</div>
+            </div>
+          </div>
+          
 
-    <p id="form-response"></p>
-  </section>
-<button id="backToTop" title="Back to Top">↑</button>
-  <footer>
-  <p>© 2025 Janhavi Tiwari . All rights reserved.</p>
-  <div class="social-links">
-    <a href="https://github.com/janhaviTiwari" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/janhavi-tiwari-34a92126b/" target="_blank">LinkedIn</a>
-    <a href="https://leetcode.com/u/janhavi13_99/" target="_blank">LeetCode</a>
-    <a href="https://www.hackerrank.com/profile/janhavi1c2630" target="_blank">HackerRank</a>
-  </div>
-</footer>
+    <div class="contact-item fade-up">
+       <div class="contact-icon">
+       <i class="fab fa-linkedin"></i>
+       </div>
+      <div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-detail">
+          <a href="https://www.linkedin.com/in/janhavi-tiwari-34a92126b/" target="_blank" rel="noopener noreferrer" style="color: white;">
+            janhavi-tiwari-34a92126b
+          </a>
+        </div>
+      </div>
+    </div>
 
+    <div class="contact-item fade-up">
+       <div class="contact-icon">
+       <i class="fab fa-github"></i>
+       </div>
+      <div>
+        <div class="contact-label">GitHub</div>
+        <div class="contact-detail">
+          <a href="https://github.com/janhaviTiwari" target="_blank" rel="noopener noreferrer" style="color: white;">
+           janhaviTiwari
+          </a>
+        </div>
+      </div>
+    </div>
 
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="script.js"></script>
-
+    <div class="contact-item fade-up">
+       <div class="contact-icon">
+      <i class="fas fa-code"></i>
+      </div>
+      <div>
+        <div class="contact-label">LeetCode</div>
+        <div class="contact-detail">
+          <a href="https://leetcode.com/u/janhavi13_99/" target="_blank" rel="noopener noreferrer" style="color: white;">
+            janhavi13_99
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+      <div class="contact-form fade-up">
+    <form id="contactForm" action="https://formspree.io/f/xpwlrajj" method="POST">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Message</button>
+    <p id="form-status" class="form-status"></p>
+  </form>
+</div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
 
 </body>
+
 </html>

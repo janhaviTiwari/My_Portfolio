@@ -1,84 +1,101 @@
-// Project filtering logic
-const filterButtons = document.querySelectorAll('.filter-buttons button');
-const projectCards = document.querySelectorAll('.project-card');
+document.addEventListener("DOMContentLoaded", () => {
+  // Loader animation
+  const loader = document.getElementById("loader");
+  window.addEventListener("load", () => {
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 500);
+  });
 
-filterButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const category = btn.getAttribute('data-filter');
+  // Animate skill bars
+  const skillProgress = document.querySelectorAll(".skill-progress");
+  const animateSkills = () => {
+    skillProgress.forEach(bar => {
+      const width = bar.getAttribute("data-width");
+      bar.style.width = width;
+    });
+  };
+  animateSkills();
 
-    projectCards.forEach(card => {
-      card.style.display = 
-        category === 'all' || card.classList.contains(category)
-        ? 'block' : 'none';
+  // Skill category filter
+  const skillButtons = document.querySelectorAll(".category-btn");
+  const skillCategories = document.querySelectorAll(".skill-category");
+
+  skillButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const category = button.getAttribute("data-category");
+
+      // Toggle active class
+      skillButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Show matching skills
+      skillCategories.forEach(categoryBlock => {
+        if (category === "all" || categoryBlock.classList.contains(category)) {
+          categoryBlock.classList.add("active");
+        } else {
+          categoryBlock.classList.remove("active");
+        }
+      });
+    });
+  });
+
+  
+  // Scroll reveal animation (fade-up)
+  const fadeElements = document.querySelectorAll(".fade-up");
+  const fadeInOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    fadeElements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < triggerBottom) {
+        el.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", fadeInOnScroll);
+  fadeInOnScroll(); // Initial call
+
+  // Smooth scroll for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     });
   });
 });
 
-// ScrollReveal animations
-ScrollReveal().reveal('section', {
-  delay: 200,
-  distance: '50px',
-  duration: 800,
-  easing: 'ease-in-out',
-  origin: 'bottom',
-  reset: false
-});
-ScrollReveal().reveal('.project-card', {
-  origin: 'bottom',
-  distance: '30px',
-  duration: 800,
-  delay: 200,
-  interval: 150
-});
-ScrollReveal().reveal('.skills-list li', {
-  delay: 100,
-  distance: '20px',
-  duration: 500,
-  origin: 'top',
-  interval: 100
-});
 
-// Show/hide back-to-top button
-const backToTopBtn = document.getElementById("backToTop");
-window.onscroll = function () {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-};
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("form-status");
 
-// Typing text animation
-const typingText = document.querySelector(".typing-text");
-const texts = ["Full Stack Developer", "MERN Enthusiast", "Problem Solver"];
-let i = 0, j = 0, isDeleting = false;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
 
-function type() {
-  if (i < texts.length) {
-    typingText.textContent = texts[i].substring(0, j);
-    if (!isDeleting) {
-      j++;
-      if (j === texts[i].length + 1) {
-        isDeleting = true;
-        setTimeout(type, 1000); // pause before deleting
-        return;
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        status.textContent = "Thanks! Your message has been sent.";
+        status.style.color = "green";
+        form.reset();
+      } else {
+        status.textContent = "Oops! Something went wrong.";
+        status.style.color = "red";
       }
-    } else {
-      j--;
-      if (j === 0) {
-        isDeleting = false;
-        i = (i + 1) % texts.length;
-      }
+    } catch (error) {
+      status.textContent = "Network error. Please try again.";
+      status.style.color = "red";
     }
-    setTimeout(type, isDeleting ? 50 : 100);
-  }
-}
-type();
-
-ScrollReveal().reveal('.timeline-item', { origin: 'left', distance: '50px', duration: 800, easing: 'ease-in-out' });
-ScrollReveal().reveal('.cert-card', { origin: 'bottom', distance: '40px', duration: 800, easing: 'ease-in-out', interval: 100 });
+  });
+});
